@@ -1,0 +1,42 @@
+quarkus:
+  http:
+    port: 8290
+  devservices:
+    enabled: false
+  kafka:
+    devservices:
+      enabled: false
+
+kafka:
+  schema:
+    registry:
+      url: http://localhost:8081
+
+mp:
+  messaging:
+    outgoing:
+      zip-code-topic:
+        connector: smallrye-kafka
+        topic: zip-code-topic
+        bootstrap:
+          servers: localhost:19092,localhost:29092
+        apicurio:
+          registry:
+            url: http://localhost:8081
+        key:
+          serializer: org.apache.kafka.common.serialization.StringSerializer
+        value:
+          serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+
+      hotel-reservation-topic:
+        connector: smallrye-kafka
+        topic: hotel-reservation-topic
+        bootstrap:
+          servers: localhost:19092,localhost:29092
+        apicurio:
+          registry:
+            url: http://localhost:8081
+        key:
+          serializer: org.apache.kafka.common.serialization.StringSerializer
+        value:
+          serializer: io.confluent.kafka.serializers.KafkaAvroSerializer

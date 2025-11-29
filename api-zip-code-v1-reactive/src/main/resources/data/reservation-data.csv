@@ -1,0 +1,2 @@
+guest_full_name,guest_email,guest_phone,room_type,room_capacity,check_in,check_out,status,total_price,currency
+Eduardo Núñez,eduardo@example.com,+51 987123456,DELUXE,2,2025-12-20,2025-12-25,CONFIRMED,54,USD

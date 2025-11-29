@@ -1,0 +1,63 @@
+quarkus:
+  devservices:
+    enabled: false
+  kafka:
+    devservices:
+      enabled: false
+  datasource:
+    db-kind: postgresql
+    username: postgres
+    password: 123456789
+    reactive:
+      url: vertx-reactive:postgresql://localhost:5432/db_zipcode_v1
+    hibernate-orm:
+      schema-management:
+        strategy: update
+
+mp:
+  messaging:
+    incoming:
+      zip-code:
+        connector: smallrye-kafka
+        topic: zip-code-topic
+        bootstrap:
+          servers: PLAINTEXT://localhost:19092,PLAINTEXT://localhost:29092
+        schema:
+          registry:
+            url: http://localhost:8081
+        group:
+          id: zip-code-group-01
+        key:
+          deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value:
+          deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+          specific:
+            avro:
+              reader: true
+        auto:
+          offset:
+            reset: earliest
+          register:
+            schemas: false
+      hotel-reservation-topic:
+        connector: smallrye-kafka
+        topic: hotel-reservation-topic
+        bootstrap:
+          servers: PLAINTEXT://localhost:19092,PLAINTEXT://localhost:29092
+        schema:
+          registry:
+            url: http://localhost:8081
+        group:
+          id: hotel-reservation-group-01
+        key:
+          deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value:
+          deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+          specific:
+            avro:
+              reader: true
+        auto:
+          offset:
+            reset: earliest
+          register:
+            schemas: false

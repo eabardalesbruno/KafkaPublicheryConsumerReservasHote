@@ -1,0 +1,56 @@
+{
+  "type": "record",
+  "name": "ZipCode",
+  "namespace": "pe.edu.galaxy.apps.model",
+  "doc": "ZipCode is a record that represents a postal code with additional information such as city, county, state, and timezone.",
+  "fields": [
+    {
+      "name": "zip",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "city",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "county",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "state",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "timezone",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "type",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    }
+  ]
+}

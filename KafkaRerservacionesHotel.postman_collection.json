@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "d2533362-467b-4fd6-b5ec-1cd161063939",
+		"name": "KafkaRerservacionesHotel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16083089",
+		"_collection_link": "https://orange-shuttle-134300.postman.co/workspace/My-Workspace~657b10ab-6fae-436d-84e2-d0ad25ff0efe/collection/16083089-d2533362-467b-4fd6-b5ec-1cd161063939?action=share&source=collection_link&creator=16083089"
+	},
+	"item": [
+		{
+			"name": "Galaxy",
+			"item": [
+				{
+					"name": "PAISES",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"zip\": \"LIM001\",\r\n    \"city\": \"LIMA\",\r\n    \"type\": \"C\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8290/api/v1/zip-code",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8290",
+							"path": [
+								"api",
+								"v1",
+								"zip-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PAISES5-ok",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"zip\": \"00001\",\r\n    \"city\": \"Hullport\",\r\n    \"country\": \"Hullport\",\r\n    \"state\": \"OH\",\r\n    \"timezone\":\"-10\",\r\n    \"type\": \"PO BOX\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8291/api/v1/zip-code",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8291",
+							"path": [
+								"api",
+								"v1",
+								"zip-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PAISES5-ok publicher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"zip\": \"00001\",\r\n    \"city\": \"Hullport\",\r\n    \"state\": \"OH\",\r\n    \"timezone\":\"-10\",\r\n    \"type\": \"PO BOX\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8290/api/v1/zip-code",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8290",
+							"path": [
+								"api",
+								"v1",
+								"zip-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reservation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"guest\": {\r\n    \"fullName\": \"Eduardo Núñez\",\r\n    \"email\": \"eduardo@example.com\",\r\n    \"phone\": \"+51 987123456\"\r\n  },\r\n  \"room\": {\r\n    \"roomType\": \"DELUXE\",\r\n    \"capacity\": 2\r\n  },\r\n  \"checkIn\": \"2025-12-20\",\r\n  \"checkOut\": \"2025-12-25\",\r\n  \"status\": \"CONFIRMED\",\r\n  \"totalPrice\": 54,\r\n  \"currency\": \"USD\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8291/api/v1/reservation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8291",
+							"path": [
+								"api",
+								"v1",
+								"reservation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reservation publicher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"guest\": {\r\n    \"fullName\": \"Eduardo Núñez\",\r\n    \"email\": \"eduardo@example.com\",\r\n    \"phone\": \"+51 987123456\"\r\n  },\r\n  \"room\": {\r\n    \"roomType\": \"DELUXE\",\r\n    \"capacity\": 2\r\n  },\r\n  \"checkIn\": \"2025-12-20\",\r\n  \"checkOut\": \"2025-12-25\",\r\n  \"status\": \"CONFIRMED\",\r\n  \"totalPrice\": 54,\r\n  \"currency\": \"USD\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8290/api/v1/reservation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8290",
+							"path": [
+								"api",
+								"v1",
+								"reservation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

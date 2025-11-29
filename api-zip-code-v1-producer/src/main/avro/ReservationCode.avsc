@@ -1,0 +1,38 @@
+{
+  "type": "record",
+  "name": "HotelReservation",
+  "namespace": "pe.edu.galaxy.apps.model",
+  "fields": [
+    {"name": "reservationId", "type": "string"},
+    {
+      "name": "guest",
+      "type": {
+        "type": "record",
+        "name": "Guest",
+        "fields": [
+          {"name": "guestId", "type": "string"},
+          {"name": "fullName", "type": "string"},
+          {"name": "email", "type": "string"},
+          {"name": "phone", "type": "string"}
+        ]
+      }
+    },
+    {
+      "name": "room",
+      "type": {
+        "type": "record",
+        "name": "Room",
+        "fields": [
+          {"name": "roomId", "type": "string"},
+          {"name": "roomType", "type": "string"},
+          {"name": "capacity", "type": "int"}
+        ]
+      }
+    },
+    {"name": "checkIn", "type": "string"},
+    {"name": "checkOut", "type": "string"},
+    {"name": "status", "type": "string"},
+    {"name": "totalPrice", "type": "int"},
+    {"name": "currency", "type": "string"}
+  ]
+}

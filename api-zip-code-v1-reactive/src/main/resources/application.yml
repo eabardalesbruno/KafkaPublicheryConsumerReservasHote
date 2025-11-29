@@ -1,0 +1,21 @@
+quarkus:
+  http:
+    port: 8291
+
+  # ---------------------------------------------
+  # DATASOURCE PRINCIPAL (ZIPCODE)
+  # ---------------------------------------------
+  datasource:
+    db-kind: postgresql
+    username: postgres
+    password: 123456789
+    reactive:
+      url: postgresql://localhost:5432/db_zipcode_v1
+
+  hibernate-orm:
+    sql-load-script: no-file
+    database:
+      generation: update
+    persistence-unit-name: zipcode-pu
+
+
