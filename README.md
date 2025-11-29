@@ -1,4 +1,4 @@
-# api-zip-code-v1
+# api-reservas con kafka publicher consumer y quarkus
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
